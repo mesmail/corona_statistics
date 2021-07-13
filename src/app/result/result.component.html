@@ -1,0 +1,91 @@
+<div class="container-fluid">
+    <div *ngIf="Loading" id="busy">
+        <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-dark" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <div *ngIf="!Loading" class="p-5">
+        <h2 class="mb-5">
+            Kindly Find The required Data Summarized as in the following table: 
+        </h2>
+        <table class="table table-bordered table-responsive table-hover table-light">
+            <tbody>
+                <tr>
+                    <th>
+                        Data Resource
+                    </th>
+                    <td>
+                        {{result.total.source}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Region
+                    </th>
+                    <td>
+                        {{region}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Last Data Update
+                    </th>
+                    <td>
+                        {{result.updated_at}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Total Cases Confirmed
+                    </th>
+                    <td>
+                        {{totally_confirmed}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Total Cases of Deaths
+                    </th>
+                    <td>
+                        {{totally_deaths}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Total Recovered Cases
+                    </th>
+                    <td>
+                        {{totally_recovered}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="p-5 text-center">
+            <button (click)="Return()" class="btn btn-lg btn-dark">
+                NEW RECORD
+            </button>
+        </div>
+    </div>
+</div>

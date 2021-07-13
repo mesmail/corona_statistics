@@ -1,0 +1,15 @@
+#busy {
+    position: fixed;
+    left: 45%;
+    top: 45%;
+    z-index: 1000;
+}
+
+div.container-fluid {
+    background-image: url("../../assets/covid2.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 950px;
+    min-width: 1400px;
+}

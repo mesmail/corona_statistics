@@ -1,0 +1,44 @@
+<header>
+    <!-- Background image -->
+    <div class="p-5 text-center bg-image" style="
+          background-image: url('assets/covid.jpg');
+          height: 1000px;
+        ">
+      <div class="mask">
+        <div class="justify-content-center align-items-center h-50">
+          <div class="col-6 offset-3">
+            <div class="text-white">
+              <span class="form-label">
+                Please, Choose the Region from here:
+              </span>
+              <br> <br>
+              <select [(ngModel)]="region" class="form-select form-select-lg">
+                <option *ngFor="let reg of GermanyRegions" [value]="reg">{{reg}}</option>
+              </select>
+            </div>
+          </div>
+  
+          <br> <br> <br>
+  
+          <div class="col-6 offset-3">
+            <div class="text-white">
+              <span class="form-label">
+                Please, to Choose the time frame week backward:
+              </span>
+              <br> <br>
+              <select [(ngModel)]="weekNum" name="week" id="week" class="form-select form-select-lg">
+                  <option *ngFor="let item of data" [value]="item.id">{{item.name}}</option>
+              </select>
+            </div>
+    
+            <br> <br> <br>
+            <div class="text-center text-white">
+                <a class="btn btn-dark btn-lg" (click)="ShowData()" role="button">SHOW DATA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  
